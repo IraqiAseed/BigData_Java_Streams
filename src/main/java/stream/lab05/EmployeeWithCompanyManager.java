@@ -27,5 +27,12 @@ public class EmployeeWithCompanyManager {
                 .mappingCompanyToItsSize(employessListWithCompany);
 
         System.out.println(companiesSize);
+
+
+        Map<String, Long> companiesSizev2 = EmployeeMapper.builder().build()
+                .mappingCompanyToItsSizeV2(employessListWithCompany);
+
+        System.out.println(companiesSize);
+
     }
 }

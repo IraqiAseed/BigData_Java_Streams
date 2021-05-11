@@ -34,6 +34,14 @@ public class EmployeeMapper {
 
     }
 
+    /*trying another approach ..  */
+    public Map<String, Long> mappingCompanyToItsSizeV2(List<EmployeeIncludeCompany> employees) {
+        return  employees.stream()
+                .collect(Collectors.groupingBy(EmployeeIncludeCompany::getCompany,Collectors.counting()));
+
+
+    }
+
 }
 
 
